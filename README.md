@@ -367,9 +367,14 @@ rpm -ivh MySQL-test-5.6.27-1.linux_glibc2.5.x86_64.rpm
 // 由于CentOS自带的mariadb的包与MySQL的包有冲突，需要先卸载
 rpm -qa |grep -i mariadb
 yum remove mariadb-libs.x86_64
+// 若需要则执行perl安装
+yum install -y perl perl-devel
+// 安装perl-Data-Dumper模组
+yum install -y perl-Data-Dumper
 // 继续安装
 rpm -ivh MySQL-server-5.6.27-1.linux_glibc2.5.x86_64.rpm
 // 安装完毕，由于我使用的是root用户，所以MySQL的用户使用的是root并生成随机密码
+// 若失败则尝试执行：/usr/bin/mysql_install_db --user=mysql --basedir=/usr/ --ldata=/var/lib/mysql/
 // 查看生成的随机密码
 cat /root/.mysql_secret
 // 启动MySQL服务
