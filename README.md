@@ -1,5 +1,8 @@
 # ymate-runtime-env
-YMP运行环境搭建所需软件包
+
+YMP运行环境搭建所需软件包, 包括: JDK、Maven、Tomcat、MySQL等。
+
+视频教程：[CentOS服务器应用实战——服务环境快速搭建](https://v.youku.com/v_show/id_XMzYxODg1NTYxMg==.html)
 
 **安装说明：**
 
