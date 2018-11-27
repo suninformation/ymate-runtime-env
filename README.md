@@ -1,6 +1,67 @@
 # ymate-runtime-env
 YMP运行环境搭建所需软件包
 
+**安装说明：**
+
+- 下载或克隆`ymate-runtime-env`到本地
+
+```
+# git clone https://github.com/suninformation/ymate-runtime-env.git
+```
+
+- 执行初始化命令：
+
+```sh
+# cd ymate-runtime-env
+# ./init.sh
+Unpacking JDK...
+Unpacking Maven...
+Unpacking Tomcat...
+Unpacking MySQL...
+-----------------------------------------------------
+Please add the following in the ~/.bash_profile file:
+-----------------------------------------------------
+JAVA_HOME=/root/ymate-runtime-env-master/jdk1.8.0_151
+MAVEN_HOME=/root/ymate-runtime-env-master/apache-maven-3.1.1
+CATALINA_HOME=/root/ymate-runtime-env-master/apache-tomcat-7.x
+
+PATH=$PATH:$HOME/.local/bin:$HOME/bin:$JAVA_HOME/bin:$MAVEN_HOME/bin
+
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+export MAVEN_OPTS=-Dfile.encoding=UTF-8
+
+export JAVA_HOME
+export MAVEN_HOME
+export CATALINA_HOME
+
+export PATH
+-----------------------------------------------------
+OK
+```
+
+- 编辑`~/.bash_profile`文件替换环境变量并使其生效
+
+```
+# vi ~/.bash_profile
+# source ~/.bash_profile
+```
+
+- 测试
+
+```
+# mvn -version
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8
+Apache Maven 3.1.1 (0728685237757ffbf44136acec0402957f723d9a; 2013-09-17 15:22:22+0000)
+Maven home: /root/ymate-runtime-env-master/apache-maven-3.1.1
+Java version: 1.8.0_151, vendor: Oracle Corporation
+Java home: /root/ymate-runtime-env-master/jdk1.8.0_151/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "3.10.0-862.14.4.el7.x86_64", arch: "amd64", family: "unix"
+```
+
+OK，安装成功！
+
 
 **背景：**
 
