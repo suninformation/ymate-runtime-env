@@ -10,13 +10,13 @@ echo "Unpacking Maven..."
 tar zxf apache-maven-3.1.1-bin.tar.gz
 
 echo "Unpacking Tomcat..."
-tar zxf apache-tomcat-7.0.82.tar.gz
+tar zxf apache-tomcat-7.0.92.tar.gz
 
 echo "Unpacking MySQL..."
 cat mysql.*|tar -zx
 tar xf MySQL-5.6.27-1.linux_glibc2.5.x86_64.rpm-bundle.tar
 
-ln -s -b apache-tomcat-7.0.82 apache-tomcat-7.x
+ln -s -b apache-tomcat-7.0.92 apache-tomcat-7.x
 
 echo "-----------------------------------------------------"
 echo "Please add the following in the ~/.bash_profile file:"
